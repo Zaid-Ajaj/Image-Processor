@@ -1,2 +1,7 @@
 # Image Processor
-A simple program that will filter an image from the computer using filters like Grayscale, Sepia Tone etc. Written entirely in C#.
+
+### ImageFilter
+This consists of first, the ImageFilter, which a small library for filtering images using filters like, Grayscale, Sepia Tone or Adjusting Brightness/Darkness and an Edge detector. The library works with reasonable effeciency. Check it out
+
+### ImageProccesor
+A Windows forms application (a GUI) the uses ImageFilter library to work with images on the computer

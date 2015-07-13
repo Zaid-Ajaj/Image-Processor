@@ -5,16 +5,30 @@ VisualStudioVersion = 14.0.22823.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageProcessor", "ImageProcessor\ImageProcessor.csproj", "{907A61F0-BF21-4520-BF90-2C24B8FE6F01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageFilter", "ImageFilter\ImageFilter.csproj", "{7DE92F93-834A-41B5-ACC8-7165412EEE6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{907A61F0-BF21-4520-BF90-2C24B8FE6F01}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{907A61F0-BF21-4520-BF90-2C24B8FE6F01}.Debug|x86.ActiveCfg = Debug|x86
 		{907A61F0-BF21-4520-BF90-2C24B8FE6F01}.Debug|x86.Build.0 = Debug|x86
+		{907A61F0-BF21-4520-BF90-2C24B8FE6F01}.Release|Any CPU.ActiveCfg = Release|x86
 		{907A61F0-BF21-4520-BF90-2C24B8FE6F01}.Release|x86.ActiveCfg = Release|x86
 		{907A61F0-BF21-4520-BF90-2C24B8FE6F01}.Release|x86.Build.0 = Release|x86
+		{7DE92F93-834A-41B5-ACC8-7165412EEE6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DE92F93-834A-41B5-ACC8-7165412EEE6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DE92F93-834A-41B5-ACC8-7165412EEE6C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7DE92F93-834A-41B5-ACC8-7165412EEE6C}.Debug|x86.Build.0 = Debug|Any CPU
+		{7DE92F93-834A-41B5-ACC8-7165412EEE6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DE92F93-834A-41B5-ACC8-7165412EEE6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DE92F93-834A-41B5-ACC8-7165412EEE6C}.Release|x86.ActiveCfg = Release|Any CPU
+		{7DE92F93-834A-41B5-ACC8-7165412EEE6C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

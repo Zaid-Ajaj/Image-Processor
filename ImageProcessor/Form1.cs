@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.IO;
+using ImageFilter;
 
 namespace ImageProcessor
 {
@@ -90,11 +91,11 @@ namespace ImageProcessor
             if (pic.Image != null)
             {
                 Cursor = Cursors.WaitCursor;
-                pic.Image = Filter.GrayScale(pic.Image);
+                pic.Image = Filter.GrayScale((Bitmap)pic.Image);
                 Cursor = Cursors.Default;
                 foreach (ImageTemplate img in pnl.Controls)
                 {
-                    if (pic.Tag.GetType() == typeof(ImageTemplate) && (ImageTemplate)pic.Tag == img)
+                    if (pic.Tag.GetType() == typeof(ImageTemplate) && pic.Tag == img)
                     {
                         img.Reload();
                     }
@@ -123,7 +124,7 @@ namespace ImageProcessor
             if (pic.Image != null)
             {
                 Cursor = Cursors.WaitCursor;
-                pic.Image = Filter.Invert(pic.Image);
+                pic.Image = Filter.Invert((Bitmap)pic.Image);
                 Cursor = Cursors.Default;
                 foreach (ImageTemplate img in pnl.Controls)
                 {
@@ -140,7 +141,7 @@ namespace ImageProcessor
             if (pic.Image != null)
             {
                 Cursor = Cursors.WaitCursor;
-                pic.Image = Filter.SepiaTone(pic.Image);
+                pic.Image = Filter.SepiaTone((Bitmap)pic.Image);
                 Cursor = Cursors.Default;
                 foreach (ImageTemplate img in pnl.Controls)
                 {
@@ -161,7 +162,7 @@ namespace ImageProcessor
                     if (br.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
                         Cursor = Cursors.WaitCursor;
-                        pic.Image = Filter.BrighterImage(pic.Image,br.trackBar1.Value);
+                        pic.Image = Filter.BrighterImage((Bitmap)pic.Image,br.trackBar1.Value);
                         Cursor = Cursors.Default;
                         foreach (ImageTemplate img in pnl.Controls)
                         {
@@ -184,7 +185,7 @@ namespace ImageProcessor
                     if (dr.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
                         Cursor = Cursors.WaitCursor;
-                        pic.Image = Filter.DarkerImage(pic.Image, dr.trackBar1.Value);
+                        pic.Image = Filter.DarkerImage((Bitmap)pic.Image, dr.trackBar1.Value);
                         Cursor = Cursors.Default;
                         foreach (ImageTemplate img in pnl.Controls)
                         {
@@ -207,7 +208,7 @@ namespace ImageProcessor
                     if (de.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
                         Cursor = Cursors.WaitCursor;
-                        pic.Image = Filter.DetectEdges(pic.Image, de.trackBar1.Value);
+                        pic.Image = Filter.DetectEdges((Bitmap)pic.Image, de.trackBar1.Value);
                         Cursor = Cursors.Default;
                         foreach (ImageTemplate img in pnl.Controls)
                         {
